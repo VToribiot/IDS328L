@@ -14,6 +14,7 @@ namespace CORE_Api_Pymes.Controllers
         public ActionResult ReceiveWebhook([FromBody] object payload)
         {
             Console.WriteLine(payload);
+            // Comentario inútil para hacer un push innecesario
             return Ok();
         }
     }
