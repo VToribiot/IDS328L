@@ -10,9 +10,16 @@ namespace CORE_Api_Pymes.Controllers
     public class TestController : ControllerBase
     {
         [HttpPost]
-        public ActionResult Post()
+        public ActionResult ReceiveWebhook([FromBody] object payload)
         {
-            return Ok("Hello World!");
+            // Process the payload data as needed
+            // Here, we're just logging it to the console
+            Console.WriteLine(payload);
+
+            // Send a response to indicate that the payload was received successfully
+            return Ok();
         }
     }
+
+    
 }
