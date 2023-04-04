@@ -13,8 +13,7 @@ namespace CORE_Api_Pymes.Controllers
         [HttpPost]
         public ActionResult ReceiveWebhook([FromBody] object payload)
         {
-            string jsonPayload = JsonSerializer.Serialize(payload);
-            Console.WriteLine(jsonPayload);
+            Console.WriteLine(payload);
             return Ok();
         }
     }
