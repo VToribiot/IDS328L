@@ -14,7 +14,7 @@ namespace CORE_Api_Pymes.Controllers
         public ActionResult ReceiveWebhook([FromBody] object payload)
         {
             string jsonPayload = JsonSerializer.Serialize(payload);
-            string info = jsonPayload;
+            Console.WriteLine(jsonPayload);
             return Ok();
         }
     }
